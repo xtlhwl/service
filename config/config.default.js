@@ -20,17 +20,16 @@ module.exports = appInfo => {
   config.middleware = [];
   // 配置跨域，是否允许跨域
   config.security = {
-    csrf:{
-      enable:false
-      
-    },
-    domainWhiteList:['*']
-  }
+    　　　　csrf: {enable: false},
+    　　　　domainWhiteList: [ '*' ]
+    　　};
+     
   // 跨域配置 
   config.cors = {
-    origin:'*',  // 允许任何域名访问
-    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH' // 允许的协议
-  }
+    origin: '*',
+    credentials: true,  //允许Cook可以跨域
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS'
+    };
   config.mysql = {
     // database configuration
     client: {

@@ -4,4 +4,5 @@ module.exports = app => {
     router.get('/default/getAerticleList',controller.default.home.getAeticleList)
     router.get('/default/getAerticleById/:id',controller.default.home.getAeticleById)
     router.get('/default/getTypeInfo',controller.default.home.getTypeInfo)
+   
 }
